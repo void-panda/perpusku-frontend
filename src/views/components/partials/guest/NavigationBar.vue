@@ -14,6 +14,7 @@ import { menuItems } from '@/lib/constants';
 import { RouterLink } from 'vue-router';
 import clsx from 'clsx';
 import UserDropdownMenu from '../admin/UserDropdownMenu.vue';
+import ThemeToggle from '../../ThemeToggle.vue';
 
 const isMobileMenuOpen = ref(false)
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
@@ -46,7 +47,9 @@ const { isLoggedIn } = inject('isLoggedIn')
           </div>
 
           <!-- Action Buttons -->
-          <div v-if="!isLoggedIn" class="hidden sm:flex items-center space-x-2 mr-4">
+          <ThemeToggle/>
+
+          <div v-if="!isLoggedIn" class="hidden sm:flex items-center space-x-2 mr-4 ml-2">
             <RouterLink to="/signin" :class="clsx(buttonVariants({ variant: 'secondary' }))">
               Sign In
             </RouterLink>

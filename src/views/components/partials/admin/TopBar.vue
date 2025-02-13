@@ -10,6 +10,7 @@ import PerpuskuLogo from '@/views/components/PerpuskuLogo.vue';
 import { menuItemsAdmin } from '@/lib/constants';
 import { useRouter } from 'vue-router';
 import { Separator } from 'radix-vue';
+import ThemeToggle from '../../ThemeToggle.vue';
 
 const { currentRoute } = useRouter();
 </script>
@@ -65,6 +66,7 @@ const { currentRoute } = useRouter();
         </div>
       </form>
     </div>
+    <ThemeToggle/>
     <UserDropdownMenu/>
   </header>
 </template>

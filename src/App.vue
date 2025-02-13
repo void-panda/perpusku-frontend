@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { provide, ref } from 'vue';
 import { RouterView } from 'vue-router'
+import { Toaster } from './views/components/ui/toast';
 
 const isLoggedIn = ref(false)
 function setIsLoggedIn(){
@@ -14,5 +15,6 @@ provide('isLoggedIn', {
 
 <template>
   <RouterView />
+  <Toaster/>
 </template>
 
